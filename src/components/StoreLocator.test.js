@@ -18,4 +18,14 @@ describe('StoreLocator', function () {
     expect(headers.length).toBe(1);
   });
 
+  it('renders 2 buttons', () => {
+    const headers = mountedStoreLocator.find('Button');
+    expect(headers.length).toBe(2);
+  });
+
+  it('renders a map', () => {
+    const headers = mountedStoreLocator.find('Map');
+    expect(headers.length).toBe(1);
+  });
+
 });
