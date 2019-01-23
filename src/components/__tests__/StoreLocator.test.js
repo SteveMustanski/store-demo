@@ -10,7 +10,7 @@ describe('StoreLocator', function () {
   });
 
   it('renders without crashing', () => {
-    let mountedStoreLocator = shallow(<StoreLocator />)
+   shallow(<StoreLocator />)
   });
 
   it('renders a header', () => {
