@@ -5,19 +5,22 @@ import Map from '../Map';
 describe('Map', function () {
   let mountedMap;
 
-  beforeEach(()=> {
-    mountedMap = shallow(<Map/>);
+  beforeEach(() => {
+    mountedMap = shallow(<Map />);
   })
 
   it('renders without crashing', () => {
-    let mountedMap = shallow(<Map />)
+    shallow(<Map />)
   });
 
-  it('contains a impage', ()=> {
+  it('contains a impage', () => {
     const img = mountedMap.find('img');
     expect(img.length).toBe(1);
   })
 
-
+  it('displays the nome map when no params are given', () => {
+    const mapSrc = mountedMap.find('img').prop("src");
+    expect(mapSrc).toEqual("images/none.png");
+  })
 
 })
