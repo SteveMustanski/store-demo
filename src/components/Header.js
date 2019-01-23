@@ -4,7 +4,7 @@ class Header extends Component {
   render() {
     return (
       <div className="Header">
-        <p>This is the header component</p>
+        <img src="images/wired-brain-coffee-logo.png" />
       </div>
     );
   }
