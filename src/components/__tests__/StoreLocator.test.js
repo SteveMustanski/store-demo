@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import StoreLocator from './StoreLocator';
+import StoreLocator from '../StoreLocator';
 
 describe('StoreLocator', function () {
   let mountedStoreLocator;
