@@ -1,3 +1,11 @@
+# Store Demo
+
+This project is a mock coffee store map application.
+
+The purpose of the project is to build a small react app using the TDD methodology.
+
+The project is built with react and tested with Jest and Enzyme.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
