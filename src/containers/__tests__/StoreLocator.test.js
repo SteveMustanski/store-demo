@@ -18,9 +18,9 @@ describe('StoreLocator', function () {
     expect(headers.length).toBe(1);
   });
 
-  it('renders 2 buttons', () => {
+  it('renders 3 buttons', () => {
     const headers = mountedStoreLocator.find('Button');
-    expect(headers.length).toBe(2);
+    expect(headers.length).toBe(3);
   });
 
   it('renders a map', () => {

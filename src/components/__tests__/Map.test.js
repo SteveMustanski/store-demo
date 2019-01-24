@@ -4,9 +4,14 @@ import Map from '../Map';
 
 describe('Map', function () {
   let mountedMap;
+  let props;
 
   beforeEach(() => {
-    mountedMap = shallow(<Map />);
+    props = {
+      location: undefined,
+      imagename: 'testmap.png'
+    }
+    mountedMap = shallow(<Map {...props} />);
   })
 
   it('renders without crashing', () => {
@@ -19,8 +24,14 @@ describe('Map', function () {
   })
 
   it('displays the nome map when no params are given', () => {
-    const mapSrc = mountedMap.find('img').prop("src");
-    expect(mapSrc).toEqual("images/none.png");
+    let defaultMap = shallow(<Map />);
+    const defaultImage =defaultMap.find('img').prop("src");
+    expect(defaultImage).toEqual("images/none.png");
   })
+
+  it('displays the map imagename that is passed to it', () => {
+    const testMap = mountedMap.find('img').prop("src");
+    expect(testMap).toEqual('images/testmap.png');
+  });
 
 })
