@@ -19,7 +19,17 @@ describe('Button', function () {
     expect(button.length).toBe(1);
   });
 
+  it('calls a function passed to it when it is clicked', () => {
+    // set up a mock function to test that a function is called
+    const mockCallBack = jest.fn();
+    const mountedButtonWithCallback = shallow(<Button handleClick={mockCallBack} />);
+    mountedButtonWithCallback.find('button').simulate('click');
+    // assert that clicking button calls the mock function 1 time
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+  })
+
 });
+
 
 describe('When a location is pased to it', function (){
   let mountedButton;
