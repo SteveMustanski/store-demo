@@ -9,7 +9,9 @@ class StoreLocator extends Component {
       <div>
       <Header />
       <div>
-      <Button/> <Button/>
+      <Button location="Portland"/> 
+      <Button location="Astoria"/>
+      <Button />
 
       </div>
       <Map/>
