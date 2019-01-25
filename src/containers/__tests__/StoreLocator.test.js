@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import StoreLocator from '../StoreLocator';
+import axios from 'axios';
+
 
 describe('StoreLocator', function () {
   let mountedStoreLocator;
@@ -12,6 +14,20 @@ describe('StoreLocator', function () {
   it('renders without crashing', () => {
    shallow(<StoreLocator />)
   });
+
+  it('calls axios.get in #componentDidMount', ()=> {
+    return mountedStoreLocator.instance().componentDidMount()
+    .then(()=>{
+      expect(axios.get).toHaveBeenCalled();
+    });
+  })
+
+  it('calls axios.get with correct url', () => {
+    return mountedStoreLocator.instance().componentDidMount()
+    .then(()=> {
+      expect(axios.get).toHaveBeenCalledWith('http://localhost:3000/data/shops.json');
+    })
+  })
 
   it('renders a header', () => {
     const headers = mountedStoreLocator.find('Header');

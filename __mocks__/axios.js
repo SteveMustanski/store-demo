@@ -20,4 +20,4 @@ function req() {
   })
 }
 
-module.exportsx = axiosMock;
+module.exports = axiosMock;
