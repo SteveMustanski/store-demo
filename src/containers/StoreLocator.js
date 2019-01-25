@@ -18,6 +18,9 @@ class StoreLocator extends Component {
 
   async componentDidMount(){
     let response = await axios.get('http://localhost:3000/data/shops.json');
+    this.setState({
+      shops:response.data.shops
+    })
   }
 
   chooseMap(e) {
