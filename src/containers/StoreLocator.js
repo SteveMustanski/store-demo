@@ -10,20 +10,7 @@ class StoreLocator extends Component {
     this.state = {
       currentMap: 'none.png'
     }
-    this.shops = [
-      {
-        location: 'Portland',
-        address: '123 Portland Drive'
-      },
-      {
-        location: 'Astoria',
-        address: '123 Astoria Street'
-      },
-      {
-        location: '',
-        address: ''
-      }
-    ];
+
     this.chooseMap = this.chooseMap.bind(this);
   }
 
